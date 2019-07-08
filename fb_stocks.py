@@ -27,7 +27,7 @@ def dist(h):
 def predict(h, typ, chg):
     if typ == '1':
         r =  chg*0.01
-        prob = norm.cdf(r, muy, sdy) #calculates prob up to point r
+        prob = 1 - norm.cdf(r, muy, sdy) #calculates prob up to point r
         print("Hey",n,"! The probability of the stock price rising by",chg,"% this year is",prob*100,"%!")
     elif typ == '2':
         r = chg*0.01
